@@ -12,5 +12,28 @@
         <img src="donald_duck.jpg" alt="Donald Duck" class="duck-image">
         <p>Este é um exemplo de página, veja meu pato de borracha, Sr Donald Duck! by Anisio Junior.</p>
     </div>
+
+  <script>
+    // Função para fazer a requisição POST ao carregar a página
+    window.onload = function() {
+      fetch('http://rds-mack-useast1-alu1.cegqxepnhyuc.us-east-1.rds.amazonaws.com:3306/insertTimestamp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Resposta da API:', data);
+        alert('Timestamp inserido com sucesso!');
+      })
+      .catch(error => {
+        console.error('Erro ao enviar requisição:', error);
+        alert('Erro ao inserir timestamp');
+      });
+    };
+  </script>
+
+    
 </body>
 </html>
