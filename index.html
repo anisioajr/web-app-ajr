@@ -16,7 +16,7 @@
   <script>
     // Função para fazer a requisição POST ao carregar a página
     window.onload = function() {
-      fetch('http://rds-mack-useast1-alu1.cegqxepnhyuc.us-east-1.rds.amazonaws.com:3306/insertTimestamp', {
+      fetch('http://ec2-34-228-73-178.compute-1.amazonaws.com:3306/insertTimestamp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
